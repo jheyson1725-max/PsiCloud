@@ -20,3 +20,81 @@ body {
     font-size: 1rem;
     line-height: 1.6;
 }
+
+/* ==========================================================================
+   COMPONENTES REUTILIZÁVEIS (.input-field, select, .btn-primary)
+   ========================================================================== */
+
+/* 1. Campos de Entrada Textuais (.input-field) */
+.input-field {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-family: inherit;
+  font-size: 1rem;
+  color: var(--cor-primaria);
+  background-color: #FFFFFF;
+  border: 1.5px solid #CBD5E1;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input-field::placeholder {
+  color: #94A3B8;
+}
+
+/* Estado de Foco (Acessibilidade) */
+.input-field:focus {
+  border-color: var(--cor-secundaria);
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.25);
+}
+
+/* 2. Caixas de Seleção (<select.input-field>) */
+select.input-field {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  /* Seta customizada em SVG usando a cor primária (#2C3E50) */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%3C2C3E50'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1.1rem;
+  padding-right: 2.5rem;
+}
+
+/* 3. Botão Principal (.btn-primary) */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0.75rem 1.5rem;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  background-color: var(--cor-secundaria);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+}
+
+/* Estados Interativos do Botão */
+.btn-primary:hover {
+  background-color: #357ABD; /* Tom de destaque levemente mais escuro */
+  box-shadow: 0 4px 12px rgba(74, 144, 226, 0.3);
+}
+
+.btn-primary:active {
+  transform: scale(0.98);
+}
+
+/* Estados Desabilitados */
+.btn-primary:disabled,
+.input-field:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+

@@ -98,3 +98,91 @@ select.input-field {
   cursor: not-allowed;
 }
 
+/* --- Estilos da Landing Page (Semana 2) --- */
+
+/* Cabeçalho com Flexbox */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 3rem;
+    background-color: var(--cor-branco);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.logo {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--cor-primaria);
+}
+
+.nav-links a {
+    margin-left: 2rem;
+    font-weight: 600;
+}
+
+/* Hero Banner com Flexbox */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 5rem 2rem;
+    background-color: var(--cor-primaria);
+    color: var(--cor-branco);
+}
+
+.hero h1 {
+    color: var(--cor-branco);
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.15rem;
+    max-width: 600px;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+}
+
+/* Botão principal reutilizável */
+.btn-primary {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-branco);
+    padding: 0.75rem 1.75rem;
+    border-radius: 6px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.btn-primary:hover {
+    background-color: #357abd;
+}
+
+/* Seção de Diferenciais (Cards com Flexbox) */
+.diferenciais {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 4rem 2rem;
+    flex-wrap: wrap; /* Permite que quebrem a linha em telas menores */
+}
+
+.card-dif {
+    background-color: var(--cor-branco);
+    padding: 2rem;
+    border-radius: 8px;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border-top: 4px solid var(--cor-secundaria);
+}
+
+.card-dif h3 {
+    margin-bottom: 0.75rem;
+    font-size: 1.2rem;
+}
+
+.card-dif p {
+    color: var(--cor-texto);
+    font-size: 0.95rem;
+}

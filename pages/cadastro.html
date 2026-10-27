@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro - PsiCloud</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-body">
+
+  <main class="auth-container">
+    <div class="auth-card">
+      
+      <!-- Cabeçalho do Card -->
+      <header class="auth-header">
+        <h1 class="logo-title">PsiCloud</h1>
+        <p class="auth-subtitle">Crie sua conta no IFPI Campus Picos</p>
+      </header>
+
+      <!-- Formulário com Validação Nativa HTML5 -->
+      <form action="login.html" method="GET" class="auth-form">
+        
+        <div class="form-group">
+          <label for="nome">Nome Completo</label>
+          <input 
+            type="text" 
+            id="nome" 
+            name="nome" 
+            class="input-field" 
+            placeholder="Digite seu nome completo" 
+            required 
+            minlength="3"
+            autocomplete="name"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="email">E-mail Institucional</label>
+          <input 
+            type="email" 
+            id="email" 
+            name="email" 
+            class="input-field" 
+            placeholder="aluno@aluno.ifpi.edu.br" 
+            required 
+            autocomplete="email"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="perfil">Perfil no Campus</label>
+          <select id="perfil" name="perfil" class="input-field" required>
+            <option value="" disabled selected>Selecione seu vínculo...</option>
+            <option value="aluno">Aluno / Discente</option>
+            <option value="servidor">Servidor / Professor</option>
+            <option value="psicologo">Psicólogo / Saúde</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="matricula">Matrícula / SIAPE</label>
+          <input 
+            type="text" 
+            id="matricula" 
+            name="matricula" 
+            class="input-field" 
+            placeholder="Ex: 202310110001" 
+            required 
+            pattern="[0-9]{6,14}"
+            title="A matrícula deve conter apenas números (entre 6 e 14 dígitos)."
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="senha">Senha de Acesso</label>
+          <input 
+            type="password" 
+            id="senha" 
+            name="senha" 
+            class="input-field" 
+            placeholder="Crie uma senha (mínimo 8 caracteres)" 
+            required 
+            minlength="8"
+            autocomplete="new-password"
+          />
+        </div>
+
+        <div class="form-group-checkbox">
+          <label class="checkbox-label">
+            <input type="checkbox" required />
+            Concordo com os termos de uso e sigilo privativo do PsiCloud.
+          </label>
+        </div>
+
+        <button type="submit" class="btn-primary">Criar Minha Conta</button>
+      </form>
+
+      <!-- Links de Navegação -->
+      <footer class="auth-footer">
+        <p>Já possui uma conta? <a href="login.html">Faça login</a></p>
+        <p><a href="index.html" class="link-back">← Voltar para a página inicial</a></p>
+      </footer>
+
+    </div>
+  </main>
+
+</body>
+</html>
